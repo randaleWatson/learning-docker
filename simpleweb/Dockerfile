@@ -3,6 +3,9 @@ FROM alpine
 
 # Install some dependencies
 RUN apk add --update npm
+
+COPY ./ ./
+
 RUN npm install
 
 # Default command
