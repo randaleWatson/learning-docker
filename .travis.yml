@@ -1,0 +1,12 @@
+sudo: required
+services:
+  - docker
+
+before_script: cd react-client
+
+before_install:
+  - docker build -t baktoobasik/docker-practice-react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true baktoobasik/docker-practice-react npm run test
+
