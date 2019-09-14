@@ -2,9 +2,8 @@ sudo: required
 services:
   - docker
 
-before_script: cd react-client
-
 before_install:
+  - cd react-client
   - docker build -t baktoobasik/docker-practice-react -f Dockerfile.dev .
 
 script:
