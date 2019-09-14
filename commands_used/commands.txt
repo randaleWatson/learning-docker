@@ -8,3 +8,6 @@ docker build -t baktoobasik/docker-practive:latest .
 
 # volumes
 docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app 46b3d3120698
+
+# execute commands on running containers
+docker exec -it 0f22e0337bfb npm run test
