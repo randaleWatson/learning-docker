@@ -1,0 +1,10 @@
+docker run -p 3000:3000 4525ceeb398a
+
+# build from a docker file named differently
+docker build -f Dockerfile.dev .
+
+# tagging a container
+docker build -t baktoobasik/docker-practive:latest .
+
+# volumes
+docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app 46b3d3120698
